@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test 2(failed)">
+    <classes>
+      <class name="automation.test.OrgAdmin_Group">
+        <methods>
+          <include name="Intilize"/>
+          <include name="checkAddGroup" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- automation.test.OrgAdmin_Group -->
+    </classes>
+  </test> <!-- Test 2(failed) -->
+</suite> <!-- Failed suite [Suite] -->

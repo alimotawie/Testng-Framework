@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test 2(failed)">
     <classes>
-      <class name="automation.test.OrgAdmin_Group">
+      <class name="automation.test.SiteCompose_test">
         <methods>
           <include name="Intilize"/>
-          <include name="checkAddGroup" invocation-numbers="0 1"/>
+          <include name="checkAddPage"/>
         </methods>
-      </class> <!-- automation.test.OrgAdmin_Group -->
+      </class> <!-- automation.test.SiteCompose_test -->
     </classes>
   </test> <!-- Test 2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

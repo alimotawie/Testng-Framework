@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import Resourses.Base;
@@ -43,30 +44,62 @@ public class Edit_user_profile extends Base  {
 	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/div/div[2]/div/ul/li/div/div/div/div/div/div[1]/form/div[2]/div/div[2]/div[3]/button") WebElement RemoveEmail ; 
 	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/div/div[2]/div/ul/li/div/div/div/div/div/div[1]/form/div[5]/div/button[1]") WebElement SaveButton;
 	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/div/div[2]/div/ul/li/div/div/div/div/div/div[1]/form/div[5]/div/button[2]") WebElement CancelButton;
+	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/div/div[2]/div/ul/li/div/div/div/div/div/div[1]/form/div[1]/div/div[3]/div[2]/span[2]/label[1]") WebElement MandatoryLabel;
+	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/div/div[2]/div/ul/li/div/div/div/div/div/div[1]/form/div[1]/div/div[7]/div/span/span/button") WebElement CalenderIcon;
+	@FindBy(xpath="//table/tbody/tr[1]/td[2]") WebElement Birthdate;
+	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/div/div[2]/div/ul/li/div/div/div/div/div/div[1]/form/div[2]/div/div") WebElement Emails;
+
+	
+
+		
 	
 	
     public void SelectCountry(String Country) {
 
-    	Select country = new Select( driver.findElement(By.name("Country")));
+    	Select country = new Select( driver.findElement(By.name("country")));
     	country.selectByVisibleText(Country);
 	}
     
+    public void SelectTitle(String Title) {
+
+    	Select title = new Select( driver.findElement(By.name("title")));
+    	title.selectByVisibleText(Title);
+	}
+    
+    
+    
+    public void SelectBirthDate() throws InterruptedException {
+    	
+    	CalenderIcon.click();
+
+    	Thread.sleep(1000);
+    	Birthdate.click();
+		
+	}
+    
+    
     public void SelectRegion(String Region) {
 
-    	Select region = new Select( driver.findElement(By.name("Region")));
+    	Select region = new Select( driver.findElement(By.name("region")));
     	region.selectByVisibleText(Region);
 	}
     
     public void SelectCity(String City) {
 
-    	Select country = new Select( driver.findElement(By.name("City")));
-    	country.selectByVisibleText(City);
+    	Select city = new Select( driver.findElement(By.name("city")));
+    	city.selectByVisibleText(City);
 	}
     
     public void Selectlang(String lang) {
 
-    	Select country = new Select( driver.findElement(By.name("City")));
-    	country.selectByVisibleText(lang);
+    	Select Lang = new Select( driver.findElement(By.name("lang")));
+    	Lang.selectByVisibleText(lang);
+	}
+    
+    public void SelectGender(String Gender) {
+
+    	Select gender = new Select( driver.findElement(By.name("gender")));
+    	gender.selectByVisibleText(Gender);
 	}
     
     public void ClearData() {
@@ -84,7 +117,7 @@ public class Edit_user_profile extends Base  {
 	}
     
     
-public void setData() {
+public void setData() throws InterruptedException {
 	
 	String fName = "updated";
 	String lName= "wooow";
@@ -95,7 +128,7 @@ public void setData() {
 	String landLine="3332452";
 	String authType= "LDAP";
 	String genderType= "Female";
-	String lang= "Arabic";
+	String lang= "العربية";
 	String type= "System Admin";
 	String job = "Tester";
 	String Nid="20120528";
@@ -105,7 +138,16 @@ public void setData() {
 	String Street ="egpyt";
 	String Zip = "11112";
 	String Title = "Dr";
-
+	
+	SelectCountry(Country);
+	SelectRegion(Region);
+	SelectCity(City);
+	Selectlang(lang);
+	SelectGender(genderType);
+	SelectTitle(Title);
+	SelectBirthDate();
+	
+	
 	firstName.sendKeys(fName);
 	lastName.sendKeys(lName);
 	phone.sendKeys(Phone);
@@ -130,10 +172,16 @@ public void CancelEdit() {
 
 public void AddExtraEmail() {
 	
-	addEmailFirst.click();
-	Email.sendKeys("test@test.com");
-	SaveEmail.click();
-		
+		addEmailFirst.click();
+		Email.sendKeys("test@test.com");
+		SaveEmail.click();
+
+
+}
+
+public WebElement Label() {
+	
+	return MandatoryLabel;
 }
 
 

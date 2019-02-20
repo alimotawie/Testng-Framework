@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.test.OrgAdmin_Group">
+      <class name="automation.test.Settings_test">
         <methods>
           <include name="Intilize"/>
-          <include name="checkAddGroup" invocation-numbers="0 1"/>
+          <include name="CheckLangMandatory"/>
         </methods>
-      </class> <!-- automation.test.OrgAdmin_Group -->
+      </class> <!-- automation.test.Settings_test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

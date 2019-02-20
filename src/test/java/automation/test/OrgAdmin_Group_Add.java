@@ -25,45 +25,59 @@ public class OrgAdmin_Group_Add extends Base {
 
 
 	OrgAdmin_Groups objGroup;
+	
+	// data driven test
+		@DataProvider(name = "TestData")
+	    public Object[][] dataProvider() {
+	        return new Object[][] { 
+	        	{ "woow", "test group"  }, 
+	        	{ "test or 1=1 --" ,"test' or 1=1 #" },
+	        	{ "" ,"" }
+	        	};
+	    }
 
-
+// data driven test , read data from above function  and pass to test function parameters 
+		// run test cases multiple times based on number of input data 
 	@Test(dataProvider="TestData")
 	public void checkAddGroup(String groupName , String groupDescription) throws InterruptedException 
 	{
 		String Name = groupName;
 		String Description = groupDescription;
+		String Expected=null;
 		OrgAdmin_Groups objGroup = PageFactory.initElements(driver, OrgAdmin_Groups.class);
 	
 		objGroup.AddGroup(Name, Description);
 		
 		Thread.sleep(1000);
 		String actual = objGroup.groupTitle().getText();
-		String Expected = "User Groups" ; 
+		if(Name=="")
+		{
+			Expected = "New Group" ; 
+		}
+		else {
+			Expected = "User Groups" ; 
+		}
 		Assert.assertEquals(actual, Expected);
+		objGroup.landingPage();
 		
 	}
 	
-	@Test
-	public void checkMandatory() throws InterruptedException 
-	{
-		String Name = "";
-		String Description = "";
-		OrgAdmin_Groups objGroup = PageFactory.initElements(driver, OrgAdmin_Groups.class);
-	
-		objGroup.AddGroup(Name, Description);
-		
-		Thread.sleep(1000);
-		String actual = objGroup.groupTitle().getText();
-		String Expected = "New Group" ; 
-		Assert.assertEquals(actual, Expected);
-		
-	}
-	
-	
-	@DataProvider(name = "TestData")
-    public Object[][] dataProvider() {
-        return new Object[][] { { "woow", "test group"  }, { "test or 1=1 --" ,"test' or 1=1 #" } };
-    }
+//	@Test
+//	public void checkMandatory() throws InterruptedException 
+//	{
+//		String Name = "";
+//		String Description = "";
+//		OrgAdmin_Groups objGroup = PageFactory.initElements(driver, OrgAdmin_Groups.class);
+//	
+//		objGroup.AddGroup(Name, Description);
+//		
+//		Thread.sleep(1000);
+//		String actual = objGroup.groupTitle().getText();
+//		String Expected = "New Group" ; 
+//		Assert.assertEquals(actual, Expected);
+//		
+//	}
+//	
 
 
 }

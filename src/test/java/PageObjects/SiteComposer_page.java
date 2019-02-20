@@ -17,15 +17,9 @@ public class SiteComposer_page extends Base {
 	Properties dataFile;
 	WebDriverWait wait;
 	
-	
 
 	public SiteComposer_page (){
 		
-//       this.driver=driver;   
-//       PageFactory.initElements(driver, this);
-//       
-//       this.dataFile = (Properties) dataFile;
-       
        this.driver = super.driver;
        this.dataFile = super.dataFile;
        this.wait = super.wait;

@@ -28,6 +28,7 @@ public class Profile_top_icon extends Base {
 	@FindBy(xpath="//*[@id='page-wrapper']/div[1]/div/div/nav/ul/li[2]/ul/li[2]/a") WebElement profileItem;
 	@FindBy(linkText="Edit Profile") WebElement profileEdit;
 	@FindBy(xpath="//a[@class='btn btn-gray-light']") WebElement profileChangePassword;
+	
 
 
 	

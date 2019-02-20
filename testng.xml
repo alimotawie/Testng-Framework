@@ -8,7 +8,7 @@
 		<classes>
 			<class name= "Resourses.Base"/>
           	<class name= "automation.test.Login_test"/>
-      		 <class name= "automation.test.SiteCompose_test"/>
+      		 <class name= "automation.test.SiteCompose_test]]"/>
 		</classes>
 	</test>
 	

@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,8 +35,7 @@ public class Base {
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  driver.get("http://demo3:8080/IMOREGATEWAY/IMORECORE/mota/mota/admin/landing");
 	  
-	  //file reader
-	
+	  //properties file reader
 	  BufferedReader reader = new BufferedReader(new FileReader(System.getProperty("user.dir")+("\\data.properties")));
 	  dataFile = (Properties) new Properties();
 	  dataFile.load(reader);
@@ -51,6 +51,23 @@ public class Base {
 			System.out.println("Taking Screenshot....");
 			TakeScreenShot.captureScreenshot(driver, result.getName());
 		}
+	}
+	
+// read json file 
+	
+	protected JSONObject getDataFile() {
+	    String dataFilePath = System.getProperty("user.dir")+("\\data.properties");
+	    JSONObject testObject = null; 
+
+	    try {
+	        FileReader reader = new FileReader(dataFilePath + "testdata.json");                        
+	        JSONParser jsonParser = new JSONParser();
+	        JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
+	        testObject = (JSONObject) jsonObject;
+	    } catch (Exception ex) {
+	        ex.printStackTrace();
+	    }
+	    return testObject;
 	}
   
 

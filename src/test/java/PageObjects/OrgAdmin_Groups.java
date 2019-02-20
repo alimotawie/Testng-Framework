@@ -59,6 +59,8 @@ public class OrgAdmin_Groups extends Base {
 	
 	@FindBy(xpath="//div[4]/div[2]/textarea") WebElement deactivationDetails;
 	
+	@FindBy(xpath="//*[@id='side-menu']/li[1]/div[1]/span/span/img") WebElement HomeIcon;
+	
 
 	
 public void triggerActive()
@@ -164,6 +166,13 @@ public void triggerActive()
 		GroupDescription.sendKeys(groupDescription);
 		SaveEditButton.click();
 	}
+	
+	public void landingPage()
+	{
+		HomeIcon.click();
+
+	}
+	
 
 
 

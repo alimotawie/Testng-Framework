@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.test.Settings_test">
+      <class name="automation.test.SiteCompose_test">
         <methods>
+          <include name="checkAddExistingPage"/>
           <include name="Intilize"/>
-          <include name="CheckLangMandatory"/>
+          <include name="checkAddPage"/>
         </methods>
-      </class> <!-- automation.test.Settings_test -->
+      </class> <!-- automation.test.SiteCompose_test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

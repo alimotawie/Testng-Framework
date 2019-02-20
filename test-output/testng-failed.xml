@@ -5,6 +5,8 @@
     <classes>
       <class name="automation.test.SiteCompose_test">
         <methods>
+          <include name="screenshotOnFailure"/>
+          <include name="checkAddExistingPage"/>
           <include name="Intilize"/>
           <include name="checkAddPage"/>
         </methods>

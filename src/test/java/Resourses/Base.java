@@ -11,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 
 public class Base {
@@ -26,7 +28,7 @@ public class Base {
 	  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+("\\chromedriver.exe"));
 	  driver = (WebDriver) new ChromeDriver() ;
 	  
-	  WebDriverWait wait = new WebDriverWait(driver, 1000);
+	  this.wait = new WebDriverWait(driver, 1000);
 	  
 	  //Set URL
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -38,6 +40,18 @@ public class Base {
 	  dataFile = (Properties) new Properties();
 	  dataFile.load(reader);
   }
+  
+//take screenshot when test case fail and add it in the Screenshot folder
+	@AfterMethod
+	public void screenshotOnFailure(ITestResult result) 
+	{
+		if (result.getStatus() == ITestResult.FAILURE)
+		{
+			System.out.println("Failed!");
+			System.out.println("Taking Screenshot....");
+			TakeScreenShot.captureScreenshot(driver, result.getName());
+		}
+	}
   
 
 }

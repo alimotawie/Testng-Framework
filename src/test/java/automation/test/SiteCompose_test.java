@@ -12,14 +12,24 @@ public class SiteCompose_test extends Base {
 	
 	SiteComposer_page ObjComposers;
 
-	@Test
+	@Test (priority = 1)
 	public void checkAddPage() throws InterruptedException 
 	{
 		SiteComposer_page ObjComposers = PageFactory.initElements(driver, SiteComposer_page.class);
 	
 		ObjComposers.AddNewPAge();
 		Thread.sleep(1000);
-//		Assert.assertTrue(ObjCompsers.checkConfirm());
+		Assert.assertTrue(ObjComposers.checkConfirmMsg());
+	}
+	
+	@Test (priority = 2)
+	public void checkAddExistingPage() throws InterruptedException 
+	{
+		SiteComposer_page ObjComposers = PageFactory.initElements(driver, SiteComposer_page.class);
+	
+		ObjComposers.AddNewExtraPAge();
+		Thread.sleep(1000);
+		Assert.assertTrue(ObjComposers.checkMsgtext().contains("Page URL already exists"));
 	}
 
 }

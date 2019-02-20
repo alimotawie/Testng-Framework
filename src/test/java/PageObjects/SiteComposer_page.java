@@ -15,10 +15,11 @@ public class SiteComposer_page extends Base {
 	
 	WebDriver driver;
 	Properties dataFile;
+	WebDriverWait wait;
 	
 	
 
-	public SiteComposer_page (WebDriver driver){
+	public SiteComposer_page (){
 		
 //       this.driver=driver;   
 //       PageFactory.initElements(driver, this);
@@ -27,6 +28,7 @@ public class SiteComposer_page extends Base {
        
        this.driver = super.driver;
        this.dataFile = super.dataFile;
+       this.wait = super.wait;
 
 }
 
@@ -44,6 +46,8 @@ public class SiteComposer_page extends Base {
 	@FindBy(xpath="//modal-container/div/div/app-admin-pge-settings/div[2]/page-configuration/div[2]/div/button[1]") WebElement FinishButton;
 	
 	@FindBy(xpath="//div[2]/page-settings/form/div[1]/perfect-scrollbar/div/div[1]/div[4]/div/span[1]/ui-switch") WebElement ToggleType;
+	@FindBy(xpath="//*[@id='toast-container']/div/div") WebElement ConfirmMessage ;
+	
 	
 	
 	
@@ -68,19 +72,43 @@ public class SiteComposer_page extends Base {
 		//CheckboxShowinMenu.click();
 		NextButton.click();
 		
-		WebElement element = super.wait.until(ExpectedConditions.elementToBeClickable(FinishButton));
+		wait.until(ExpectedConditions.elementToBeClickable(FinishButton));
 		
 		FinishButton.click();
 		
 	
 	}
 	
-//	public boolean checkConfirm()
-//	{
-//		return ConfirmMessage.isDisplayed();
-//	}
-//	
-//	
+	public void AddNewExtraPAge() throws InterruptedException
+	{
+		
+		AddPageButton.click();
+		
+		PageName.sendKeys( dataFile.getProperty("PageName") );
+		PageTitle.sendKeys(dataFile.getProperty("PageTitle") );
+		MenuName.sendKeys(dataFile.getProperty("MenuName") );
+		
+		ToggleType.click();
+		//CheckboxShowinMenu.click();
+		NextButton.click();
+		
+	
+	}
+	
+	
+	
+	
+	public boolean checkConfirmMsg()
+	{
+		return ConfirmMessage.isDisplayed();
+	}
+	
+	public String checkMsgtext()
+	{
+		return ConfirmMessage.getText();
+	}
+	
+	
 	
 	
 	

@@ -1,13 +1,16 @@
 package PageObjects;
 
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import Resourses.Base;
 
@@ -43,6 +46,19 @@ public class SiteComposer_page extends Base {
 	@FindBy(xpath="//*[@id='toast-container']/div/div") WebElement ConfirmMessage ;
 	
 	
+	// working with multiple items inside a locator  
+	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/app-composer/div/app-composer-site-menu/div[2]/div/perfect-scrollbar/div/div[1]/accordion/accordion-group[2]/div/div[1]/div")
+	public WebElement SiteLayoutTab ;
+	
+	@FindBy(xpath="	//*[@id='page-wrapper']/div[2]/app-composer/div/app-composer-site-menu/div[2]/div/perfect-scrollbar/div/div[1]/accordion/accordion-group[1]/div/div[1]/div/div/span")
+	public WebElement SiteMapTab ;
+	
+	@FindAll(@FindBy (xpath="//*[@role='tabpanel']/div/div/ul/li"))
+	public List<WebElement> SiteLayoutitems;
+	
+	@FindAll(@FindBy (xpath="//*[@class='dd-list first-node']/li/div/div"))
+	public List<WebElement> SiteMapitems;
+	
 	
 	
 	public void openComposeSite() throws InterruptedException
@@ -51,6 +67,20 @@ public class SiteComposer_page extends Base {
 		Thread.sleep(1000);
 		ComposeIcon.click();
 	}
+	
+	public void openSiteLayoutMenu() throws InterruptedException
+	{
+		SiteLayoutTab.click();
+		
+	}
+	
+	public void openSiteMapMenu() throws InterruptedException
+	{
+		SiteMapTab.click();
+		
+	}
+	
+	
 	
 	public void AddNewPAge() throws InterruptedException
 	{

@@ -2,20 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="12620" started-at="2019-02-20T11:40:57Z" finished-at="2019-02-20T11:41:10Z">
+  <suite name="Suite" duration-ms="8557" started-at="2019-02-21T14:14:31Z" finished-at="2019-02-21T14:14:40Z">
     <groups>
+      <group name="UI_Test">
+        <method signature="SiteCompose_test.checkSiteLayoutCount()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteLayoutCount" class="automation.test.SiteCompose_test"/>
+        <method signature="SiteCompose_test.checkSiteLayoutitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteLayoutitems" class="automation.test.SiteCompose_test"/>
+        <method signature="SiteCompose_test.checkSiteMapitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteMapitems" class="automation.test.SiteCompose_test"/>
+      </group> <!-- UI_Test -->
     </groups>
-    <test name="Test 2" duration-ms="12620" started-at="2019-02-20T11:40:57Z" finished-at="2019-02-20T11:41:10Z">
+    <test name="UI testing" duration-ms="4" started-at="2019-02-21T14:14:31Z" finished-at="2019-02-21T14:14:31Z">
+    </test> <!-- UI testing -->
+    <test name="opensite " duration-ms="8537" started-at="2019-02-21T14:14:31Z" finished-at="2019-02-21T14:14:40Z">
       <class name="automation.test.Login_test">
-        <test-method status="PASS" signature="checkLogin()[pri:0, instance:automation.test.Login_test@66a3ffec]" name="checkLogin" duration-ms="1143" started-at="2019-02-20T11:40:57Z" finished-at="2019-02-20T11:40:58Z">
+        <test-method status="PASS" signature="checkLogin()[pri:0, instance:automation.test.Login_test@7085bdee]" name="checkLogin" duration-ms="1147" started-at="2019-02-21T14:14:31Z" finished-at="2019-02-21T14:14:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogin -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.Login_test@66a3ffec]" name="screenshotOnFailure" is-config="true" duration-ms="2" started-at="2019-02-20T11:40:58Z" finished-at="2019-02-20T11:40:58Z">
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.Login_test@7085bdee]" name="screenshotOnFailure" is-config="true" duration-ms="2" started-at="2019-02-21T14:14:32Z" finished-at="2019-02-21T14:14:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkLogin status=SUCCESS method=Login_test.checkLogin()[pri:0, instance:automation.test.Login_test@66a3ffec] output={null}]]]>
+                <![CDATA[[TestResult name=checkLogin status=SUCCESS method=Login_test.checkLogin()[pri:0, instance:automation.test.Login_test@7085bdee] output={null}]]]>
               </value>
             </param>
           </params>
@@ -24,94 +31,58 @@
         </test-method> <!-- screenshotOnFailure -->
       </class> <!-- automation.test.Login_test -->
       <class name="Resourses.Base">
-        <test-method status="PASS" signature="Intilize()[pri:0, instance:Resourses.Base@3e6fa38a]" name="Intilize" is-config="true" duration-ms="3947" started-at="2019-02-20T11:40:53Z" finished-at="2019-02-20T11:40:57Z">
+        <test-method status="PASS" signature="Intilize()[pri:0, instance:Resourses.Base@73ad2d6]" name="Intilize" is-config="true" duration-ms="4388" started-at="2019-02-21T14:14:27Z" finished-at="2019-02-21T14:14:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Intilize -->
       </class> <!-- Resourses.Base -->
-      <class name="automation.test.OrgAdmin_Group_Add">
-        <test-method status="PASS" signature="checkAddGroup(java.lang.String, java.lang.String)[pri:0, instance:automation.test.OrgAdmin_Group_Add@77caeb3e]" name="checkAddGroup" duration-ms="4608" started-at="2019-02-20T11:40:58Z" data-provider="TestData" finished-at="2019-02-20T11:41:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[woow]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test group]]>
-              </value>
-            </param>
-          </params>
+      <class name="automation.test.SiteCompose_test">
+        <test-method status="PASS" signature="checkSiteLayoutCount()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteLayoutCount" duration-ms="6949" started-at="2019-02-21T14:14:32Z" finished-at="2019-02-21T14:14:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkAddGroup -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.OrgAdmin_Group_Add@77caeb3e]" name="screenshotOnFailure" is-config="true" duration-ms="1" started-at="2019-02-20T11:41:03Z" finished-at="2019-02-20T11:41:03Z">
+        </test-method> <!-- checkSiteLayoutCount -->
+        <test-method status="PASS" signature="checkSiteLayoutitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteLayoutitems" duration-ms="187" started-at="2019-02-21T14:14:39Z" finished-at="2019-02-21T14:14:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSiteLayoutitems -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-21T14:14:39Z" finished-at="2019-02-21T14:14:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkAddGroup status=SUCCESS method=OrgAdmin_Group_Add.checkAddGroup(java.lang.String, java.lang.String)[pri:0, instance:automation.test.OrgAdmin_Group_Add@77caeb3e] output={null}]]]>
+                <![CDATA[[TestResult name=checkSiteLayoutCount status=SUCCESS method=SiteCompose_test.checkSiteLayoutCount()[pri:0, instance:automation.test.SiteCompose_test@1ce92674] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-        <test-method status="PASS" signature="checkAddGroup(java.lang.String, java.lang.String)[pri:0, instance:automation.test.OrgAdmin_Group_Add@77caeb3e]" name="checkAddGroup" duration-ms="3462" started-at="2019-02-20T11:41:03Z" data-provider="TestData" finished-at="2019-02-20T11:41:06Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test or 1=1 --]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test' or 1=1 #]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="checkSiteMapitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteMapitems" duration-ms="239" started-at="2019-02-21T14:14:40Z" finished-at="2019-02-21T14:14:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkAddGroup -->
-        <test-method status="PASS" signature="checkAddGroup(java.lang.String, java.lang.String)[pri:0, instance:automation.test.OrgAdmin_Group_Add@77caeb3e]" name="checkAddGroup" duration-ms="3385" started-at="2019-02-20T11:41:06Z" data-provider="TestData" finished-at="2019-02-20T11:41:10Z">
+        </test-method> <!-- checkSiteMapitems -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-21T14:14:40Z" finished-at="2019-02-21T14:14:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkAddGroup -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.OrgAdmin_Group_Add@77caeb3e]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-20T11:41:06Z" finished-at="2019-02-20T11:41:06Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkAddGroup status=SUCCESS method=OrgAdmin_Group_Add.checkAddGroup(java.lang.String, java.lang.String)[pri:0, instance:automation.test.OrgAdmin_Group_Add@77caeb3e] output={null}]]]>
+                <![CDATA[[TestResult name=checkSiteLayoutitems status=SUCCESS method=SiteCompose_test.checkSiteLayoutitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.OrgAdmin_Group_Add@77caeb3e]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-20T11:41:10Z" finished-at="2019-02-20T11:41:10Z">
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-21T14:14:40Z" finished-at="2019-02-21T14:14:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkAddGroup status=SUCCESS method=OrgAdmin_Group_Add.checkAddGroup(java.lang.String, java.lang.String)[pri:0, instance:automation.test.OrgAdmin_Group_Add@77caeb3e] output={null}]]]>
+                <![CDATA[[TestResult name=checkSiteMapitems status=SUCCESS method=SiteCompose_test.checkSiteMapitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-      </class> <!-- automation.test.OrgAdmin_Group_Add -->
-    </test> <!-- Test 2 -->
+      </class> <!-- automation.test.SiteCompose_test -->
+    </test> <!-- opensite  -->
   </suite> <!-- Suite -->
 </testng-results>

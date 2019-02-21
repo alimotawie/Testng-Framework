@@ -2,13 +2,21 @@ package Resourses;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.codehaus.plexus.util.FileUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -43,13 +51,23 @@ public class Base {
   
 //take screenshot when test case fail and add it in the Screenshot folder
 	@AfterMethod
-	public void screenshotOnFailure(ITestResult result) 
+	public void screenshotOnFailure(ITestResult result) throws IOException 
 	{
-		if (result.getStatus() == ITestResult.FAILURE)
-		{
-			System.out.println("Failed!");
-			System.out.println("Taking Screenshot....");
-			TakeScreenShot.captureScreenshot(driver, result.getName());
+		    String path;
+		    if (result.getStatus() == ITestResult.FAILURE)
+			{
+		    	System.out.println("Failed!");
+				System.out.println("Taking Screenshot....");
+				
+				Path dest = Paths.get("./Screenshots",result.getName()+System.currentTimeMillis()+".png"); 
+				try {
+					Files.createDirectories(dest.getParent());
+					FileOutputStream out = new FileOutputStream(dest.toString());
+					out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
+					out.close();
+				} catch (IOException e) {
+					System.out.println("Excpetion while taking screenshot"+ e.getMessage());
+				}
 		}
 	}
 	

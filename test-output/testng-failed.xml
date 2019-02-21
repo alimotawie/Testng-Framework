@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test 2(failed)">
+  <test thread-count="5" name="opensite (failed)">
     <classes>
-      <class name="automation.test.OrgAdmin_Group_Add">
+      <class name="automation.test.SiteCompose_test">
         <methods>
           <include name="screenshotOnFailure"/>
+          <include name="checkSiteMapitems"/>
           <include name="Intilize"/>
-          <include name="checkAddGroup" invocation-numbers="2"/>
         </methods>
-      </class> <!-- automation.test.OrgAdmin_Group_Add -->
+      </class> <!-- automation.test.SiteCompose_test -->
     </classes>
-  </test> <!-- Test 2(failed) -->
+  </test> <!-- opensite (failed) -->
 </suite> <!-- Failed suite [Suite] -->

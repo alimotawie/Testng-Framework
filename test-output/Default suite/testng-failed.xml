@@ -5,9 +5,11 @@
     <classes>
       <class name="automation.test.SiteCompose_test">
         <methods>
-          <include name="checkAddExistingPage"/>
+          <include name="checkSiteLayoutCount"/>
+          <include name="screenshotOnFailure"/>
+          <include name="checkSiteMapitems"/>
           <include name="Intilize"/>
-          <include name="checkAddPage"/>
+          <include name="checkSiteLayoutitems"/>
         </methods>
       </class> <!-- automation.test.SiteCompose_test -->
     </classes>

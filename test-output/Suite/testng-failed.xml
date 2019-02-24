@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="opensite (failed)">
     <classes>
-      <class name="automation.test.SiteCompose_test">
+      <class name="automation.test.Edit_profile_test">
         <methods>
           <include name="screenshotOnFailure"/>
-          <include name="checkSiteMapitems"/>
+          <include name="CheckEditProfile"/>
           <include name="Intilize"/>
         </methods>
-      </class> <!-- automation.test.SiteCompose_test -->
+      </class> <!-- automation.test.Edit_profile_test -->
     </classes>
   </test> <!-- opensite (failed) -->
 </suite> <!-- Failed suite [Suite] -->

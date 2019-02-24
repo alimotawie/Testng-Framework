@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="8557" started-at="2019-02-21T14:14:31Z" finished-at="2019-02-21T14:14:40Z">
+  <suite name="Suite" duration-ms="8945" started-at="2019-02-24T12:37:42Z" finished-at="2019-02-24T12:37:51Z">
     <groups>
-      <group name="UI_Test">
-        <method signature="SiteCompose_test.checkSiteLayoutCount()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteLayoutCount" class="automation.test.SiteCompose_test"/>
-        <method signature="SiteCompose_test.checkSiteLayoutitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteLayoutitems" class="automation.test.SiteCompose_test"/>
-        <method signature="SiteCompose_test.checkSiteMapitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteMapitems" class="automation.test.SiteCompose_test"/>
-      </group> <!-- UI_Test -->
     </groups>
-    <test name="UI testing" duration-ms="4" started-at="2019-02-21T14:14:31Z" finished-at="2019-02-21T14:14:31Z">
-    </test> <!-- UI testing -->
-    <test name="opensite " duration-ms="8537" started-at="2019-02-21T14:14:31Z" finished-at="2019-02-21T14:14:40Z">
+    <test name="opensite " duration-ms="8945" started-at="2019-02-24T12:37:42Z" finished-at="2019-02-24T12:37:51Z">
       <class name="automation.test.Login_test">
-        <test-method status="PASS" signature="checkLogin()[pri:0, instance:automation.test.Login_test@7085bdee]" name="checkLogin" duration-ms="1147" started-at="2019-02-21T14:14:31Z" finished-at="2019-02-21T14:14:32Z">
+        <test-method status="PASS" signature="checkLogin()[pri:0, instance:automation.test.Login_test@6a4f787b]" name="checkLogin" duration-ms="215" started-at="2019-02-24T12:37:42Z" finished-at="2019-02-24T12:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogin -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.Login_test@7085bdee]" name="screenshotOnFailure" is-config="true" duration-ms="2" started-at="2019-02-21T14:14:32Z" finished-at="2019-02-21T14:14:32Z">
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.Login_test@6a4f787b]" name="screenshotOnFailure" is-config="true" duration-ms="2" started-at="2019-02-24T12:37:43Z" finished-at="2019-02-24T12:37:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkLogin status=SUCCESS method=Login_test.checkLogin()[pri:0, instance:automation.test.Login_test@7085bdee] output={null}]]]>
+                <![CDATA[[TestResult name=checkLogin status=SUCCESS method=Login_test.checkLogin()[pri:0, instance:automation.test.Login_test@6a4f787b] output={null}]]]>
               </value>
             </param>
           </params>
@@ -31,58 +24,28 @@
         </test-method> <!-- screenshotOnFailure -->
       </class> <!-- automation.test.Login_test -->
       <class name="Resourses.Base">
-        <test-method status="PASS" signature="Intilize()[pri:0, instance:Resourses.Base@73ad2d6]" name="Intilize" is-config="true" duration-ms="4388" started-at="2019-02-21T14:14:27Z" finished-at="2019-02-21T14:14:31Z">
+        <test-method status="PASS" signature="Intilize()[pri:0, instance:Resourses.Base@604ed9f0]" name="Intilize" is-config="true" duration-ms="6042" started-at="2019-02-24T12:37:36Z" finished-at="2019-02-24T12:37:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Intilize -->
       </class> <!-- Resourses.Base -->
-      <class name="automation.test.SiteCompose_test">
-        <test-method status="PASS" signature="checkSiteLayoutCount()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteLayoutCount" duration-ms="6949" started-at="2019-02-21T14:14:32Z" finished-at="2019-02-21T14:14:39Z">
+      <class name="automation.test.Edit_profile_test">
+        <test-method status="PASS" signature="CheckEditProfile()[pri:0, instance:automation.test.Edit_profile_test@685cb137]" name="CheckEditProfile" duration-ms="8712" started-at="2019-02-24T12:37:43Z" finished-at="2019-02-24T12:37:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkSiteLayoutCount -->
-        <test-method status="PASS" signature="checkSiteLayoutitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteLayoutitems" duration-ms="187" started-at="2019-02-21T14:14:39Z" finished-at="2019-02-21T14:14:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkSiteLayoutitems -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-21T14:14:39Z" finished-at="2019-02-21T14:14:39Z">
+        </test-method> <!-- CheckEditProfile -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.Edit_profile_test@685cb137]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-24T12:37:51Z" finished-at="2019-02-24T12:37:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkSiteLayoutCount status=SUCCESS method=SiteCompose_test.checkSiteLayoutCount()[pri:0, instance:automation.test.SiteCompose_test@1ce92674] output={null}]]]>
+                <![CDATA[[TestResult name=CheckEditProfile status=SUCCESS method=Edit_profile_test.CheckEditProfile()[pri:0, instance:automation.test.Edit_profile_test@685cb137] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-        <test-method status="PASS" signature="checkSiteMapitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="checkSiteMapitems" duration-ms="239" started-at="2019-02-21T14:14:40Z" finished-at="2019-02-21T14:14:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkSiteMapitems -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-21T14:14:40Z" finished-at="2019-02-21T14:14:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkSiteLayoutitems status=SUCCESS method=SiteCompose_test.checkSiteLayoutitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenshotOnFailure -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.SiteCompose_test@1ce92674]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-21T14:14:40Z" finished-at="2019-02-21T14:14:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkSiteMapitems status=SUCCESS method=SiteCompose_test.checkSiteMapitems()[pri:0, instance:automation.test.SiteCompose_test@1ce92674] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenshotOnFailure -->
-      </class> <!-- automation.test.SiteCompose_test -->
+      </class> <!-- automation.test.Edit_profile_test -->
     </test> <!-- opensite  -->
   </suite> <!-- Suite -->
 </testng-results>

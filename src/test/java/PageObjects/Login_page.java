@@ -14,12 +14,13 @@ import Resourses.Base;
 public class Login_page extends Base {
 	
 	public WebDriver driver;
-	public Login_page (WebDriver driver){ 
-       this.driver=driver; 
-       PageFactory.initElements(driver, this);
-      
-}
 	
+	public Login_page (){
+
+	       this.driver = super.driver;
+	       
+	}
+
     
     @FindBy(how=How.NAME, using="username") public WebElement user_field;
     @FindBy(how=How.NAME, using="password") public WebElement password_field;

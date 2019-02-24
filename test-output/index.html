@@ -54,12 +54,12 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Suite">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,22 +102,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="automation.test.Edit_profile_test" hash-for-method="CheckEditProfile">CheckEditProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="automation.test.Login_test" hash-for-method="checkLogin">checkLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="automation.test.SiteCompose_test" hash-for-method="checkSiteLayoutCount">checkSiteLayoutCount</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="automation.test.SiteCompose_test" hash-for-method="checkSiteLayoutitems">checkSiteLayoutitems</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="automation.test.SiteCompose_test" hash-for-method="checkSiteMapitems">checkSiteMapitems</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -135,35 +125,6 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">automation.test.SiteCompose_test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkSiteLayoutCount">
-                  </a> <!-- checkSiteLayoutCount -->
-                  <span class="method-name">checkSiteLayoutCount</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkSiteLayoutitems">
-                  </a> <!-- checkSiteLayoutitems -->
-                  <span class="method-name">checkSiteLayoutitems</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkSiteMapitems">
-                  </a> <!-- checkSiteMapitems -->
-                  <span class="method-name">checkSiteMapitems</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">automation.test.Login_test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -172,6 +133,21 @@
                   <a name="checkLogin">
                   </a> <!-- checkLogin -->
                   <span class="method-name">checkLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">automation.test.Edit_profile_test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckEditProfile">
+                  </a> <!-- CheckEditProfile -->
+                  <span class="method-name">CheckEditProfile</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,18 +162,11 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;UI testing&quot;&gt;
-    &lt;groups&gt;
-      &lt;run&gt;
-        &lt;include name=&quot;UI_Test&quot;/&gt;
-      &lt;/run&gt;
-    &lt;/groups&gt;
-  &lt;/test&gt; &lt;!-- UI testing --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;opensite &quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Resourses.Base&quot;/&gt;
       &lt;class name=&quot;automation.test.Login_test&quot;/&gt;
-      &lt;class name=&quot;automation.test.SiteCompose_test&quot;/&gt;
+      &lt;class name=&quot;automation.test.Edit_profile_test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- opensite  --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -211,9 +180,6 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">UI testing (0 classes)</span>
-              </li>
-              <li>
                 <span class="test-name">opensite  (3 classes)</span>
               </li>
             </ul>
@@ -224,22 +190,6 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">UI_Test</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">checkSiteLayoutCount</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">checkSiteLayoutitems</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">checkSiteMapitems</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -256,23 +206,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkSiteLayoutCount')
-data.setCell(0, 2, 'automation.test.SiteCompose_test')
-data.setCell(0, 3, 6949);
+data.setCell(0, 1, 'CheckEditProfile')
+data.setCell(0, 2, 'automation.test.Edit_profile_test')
+data.setCell(0, 3, 8712);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'checkLogin')
 data.setCell(1, 2, 'automation.test.Login_test')
-data.setCell(1, 3, 1147);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'checkSiteMapitems')
-data.setCell(2, 2, 'automation.test.SiteCompose_test')
-data.setCell(2, 3, 239);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'checkSiteLayoutitems')
-data.setCell(3, 2, 'automation.test.SiteCompose_test')
-data.setCell(3, 3, 187);
+data.setCell(1, 3, 215);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -296,14 +238,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">automation.test.SiteCompose_test</span>
+              <span class="ignored-class-name">automation.test.Login_test</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">Intilize</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">automation.test.Login_test</span>
+              <span class="ignored-class-name">automation.test.Edit_profile_test</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">Intilize</span>
                 <br/>
@@ -327,38 +269,22 @@ return data;
               <div class="chronological-class-name">automation.test.Login_test</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">checkLogin</span>
-                <span class="method-start">4416 ms</span>
+                <span class="method-start">6055 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">screenshotOnFailure([TestResult name=checkLogin status=SUCCESS method=Login_test.checkLogin()[pri:0, instance:automation...)</span>
-                <span class="method-start">5564 ms</span>
+                <span class="method-start">6271 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">automation.test.SiteCompose_test</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">automation.test.Edit_profile_test</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">checkSiteLayoutCount</span>
-                <span class="method-start">5567 ms</span>
+                <span class="method-name">CheckEditProfile</span>
+                <span class="method-start">6274 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">screenshotOnFailure([TestResult name=checkSiteLayoutCount status=SUCCESS method=SiteCompose_test.checkSiteLayoutCount()[...)</span>
-                <span class="method-start">12517 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">checkSiteLayoutitems</span>
-                <span class="method-start">12517 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">screenshotOnFailure([TestResult name=checkSiteLayoutitems status=SUCCESS method=SiteCompose_test.checkSiteLayoutitems()[...)</span>
-                <span class="method-start">12705 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">checkSiteMapitems</span>
-                <span class="method-start">12705 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">screenshotOnFailure([TestResult name=checkSiteMapitems status=SUCCESS method=SiteCompose_test.checkSiteMapitems()[pri:0,...)</span>
-                <span class="method-start">12945 ms</span>
+                <span class="method-name">screenshotOnFailure([TestResult name=CheckEditProfile status=SUCCESS method=Edit_profile_test.CheckEditProfile()[pri:0, ...)</span>
+                <span class="method-start">14987 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

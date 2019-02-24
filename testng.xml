@@ -3,25 +3,16 @@
 <suite name="Suite" preserve-order="true">
 
 
-	<test name="UI testing">
-		<groups>
-			<run>
-				<include name="UI_Test" />
-			</run>
-		</groups>
-
-	</test>
 
 	<test name="opensite ">
 		<classes>
 			<class name="Resourses.Base" />
 			<class name="automation.test.Login_test" />
-			<class name="automation.test.SiteCompose_test" />
+			<class name="automation.test.Edit_profile_test" />
 		</classes>
 		
 		
 	</test>
-
 
 
 

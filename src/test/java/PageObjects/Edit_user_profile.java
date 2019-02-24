@@ -1,5 +1,12 @@
 package PageObjects;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -48,11 +55,10 @@ public class Edit_user_profile extends Base  {
 	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/div/div[2]/div/ul/li/div/div/div/div/div/div[1]/form/div[1]/div/div[7]/div/span/span/button") WebElement CalenderIcon;
 	@FindBy(xpath="//table/tbody/tr[1]/td[2]") WebElement Birthdate;
 	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/div/div[2]/div/ul/li/div/div/div/div/div/div[1]/form/div[2]/div/div") WebElement Emails;
+	@FindBy(xpath="//*[@id='page-wrapper']/div[2]/div/div[2]/div/ul/li/div/div/div/div/div/div[1]/form/div[1]/div/div[1]/div[2]/div/div[1]/i") WebElement uploadImg;
 
 	
 
-		
-	
 	
     public void SelectCountry(String Country) {
 
@@ -128,7 +134,7 @@ public void setData() throws InterruptedException {
 	String landLine="3332452";
 	String authType= "LDAP";
 	String genderType= "Female";
-	String lang= "العربية";
+	String lang= "English";
 	String type= "System Admin";
 	String job = "Tester";
 	String Nid="20120528";
@@ -183,6 +189,35 @@ public WebElement Label() {
 	
 	return MandatoryLabel;
 }
+
+//using robot class to upload image / files 
+public void SelectImage() throws AWTException {
+	
+	uploadImg.click();
+	String imgPath =  System.getProperty("user.dir")+("\\testimg.png");
+	 StringSelection stringSelection = new StringSelection(imgPath);
+     Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+     clipboard.setContents(stringSelection, null);
+
+     Robot robot = null;
+     robot = new Robot();
+   
+     robot.delay(250);
+     robot.keyPress(KeyEvent.VK_ENTER);
+     robot.keyRelease(KeyEvent.VK_ENTER);
+     robot.keyPress(KeyEvent.VK_CONTROL);
+     robot.keyPress(KeyEvent.VK_V);
+     robot.keyRelease(KeyEvent.VK_V);
+     robot.keyRelease(KeyEvent.VK_CONTROL);
+     robot.keyPress(KeyEvent.VK_ENTER);
+     robot.delay(150);
+     robot.keyRelease(KeyEvent.VK_ENTER);
+	
+	
+}
+
+
+
 
 
 

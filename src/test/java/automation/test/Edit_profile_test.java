@@ -3,6 +3,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import java.awt.AWTException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -26,7 +27,7 @@ public class Edit_profile_test extends Base {
 	Edit_user_profile objEdit;
 
 	@Test
-	public void CheckEditProfile () throws InterruptedException {
+	public void CheckEditProfile () throws InterruptedException, AWTException {
 
 		
 		Profile_top_icon objIcon = PageFactory.initElements(driver, Profile_top_icon.class);
@@ -36,6 +37,7 @@ public class Edit_profile_test extends Base {
 		objEdit.ClearData();		
 		objEdit.setData();
 		objEdit.AddExtraEmail();
+		objEdit.SelectImage();
 		objEdit.SaveEdit();
 		Assert.assertFalse(objEdit.Label().isDisplayed());
 	}

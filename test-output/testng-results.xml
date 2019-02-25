@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="8945" started-at="2019-02-24T12:37:42Z" finished-at="2019-02-24T12:37:51Z">
+  <suite name="Suite" duration-ms="15535" started-at="2019-02-25T09:51:21Z" finished-at="2019-02-25T09:51:36Z">
     <groups>
     </groups>
-    <test name="opensite " duration-ms="8945" started-at="2019-02-24T12:37:42Z" finished-at="2019-02-24T12:37:51Z">
+    <test name="opensite " duration-ms="15535" started-at="2019-02-25T09:51:21Z" finished-at="2019-02-25T09:51:36Z">
       <class name="automation.test.Login_test">
-        <test-method status="PASS" signature="checkLogin()[pri:0, instance:automation.test.Login_test@6a4f787b]" name="checkLogin" duration-ms="215" started-at="2019-02-24T12:37:42Z" finished-at="2019-02-24T12:37:43Z">
+        <test-method status="PASS" signature="checkLogin()[pri:0, instance:automation.test.Login_test@6a4f787b]" name="checkLogin" duration-ms="898" started-at="2019-02-25T09:51:21Z" finished-at="2019-02-25T09:51:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogin -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.Login_test@6a4f787b]" name="screenshotOnFailure" is-config="true" duration-ms="2" started-at="2019-02-24T12:37:43Z" finished-at="2019-02-24T12:37:43Z">
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.Login_test@6a4f787b]" name="screenshotOnFailure" is-config="true" duration-ms="3" started-at="2019-02-25T09:51:21Z" finished-at="2019-02-25T09:51:21Z">
           <params>
             <param index="0">
               <value>
@@ -24,28 +24,28 @@
         </test-method> <!-- screenshotOnFailure -->
       </class> <!-- automation.test.Login_test -->
       <class name="Resourses.Base">
-        <test-method status="PASS" signature="Intilize()[pri:0, instance:Resourses.Base@604ed9f0]" name="Intilize" is-config="true" duration-ms="6042" started-at="2019-02-24T12:37:36Z" finished-at="2019-02-24T12:37:42Z">
+        <test-method status="PASS" signature="Intilize()[pri:0, instance:Resourses.Base@604ed9f0]" name="Intilize" is-config="true" duration-ms="4510" started-at="2019-02-25T09:51:16Z" finished-at="2019-02-25T09:51:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Intilize -->
       </class> <!-- Resourses.Base -->
-      <class name="automation.test.Edit_profile_test">
-        <test-method status="PASS" signature="CheckEditProfile()[pri:0, instance:automation.test.Edit_profile_test@685cb137]" name="CheckEditProfile" duration-ms="8712" started-at="2019-02-24T12:37:43Z" finished-at="2019-02-24T12:37:51Z">
+      <class name="automation.test.SiteCompose_test">
+        <test-method status="PASS" signature="checkAddShortcut()[pri:1, instance:automation.test.SiteCompose_test@685cb137]" name="checkAddShortcut" duration-ms="14616" started-at="2019-02-25T09:51:21Z" finished-at="2019-02-25T09:51:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckEditProfile -->
-        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.Edit_profile_test@685cb137]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2019-02-24T12:37:51Z" finished-at="2019-02-24T12:37:51Z">
+        </test-method> <!-- checkAddShortcut -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:automation.test.SiteCompose_test@685cb137]" name="screenshotOnFailure" is-config="true" duration-ms="1" started-at="2019-02-25T09:51:36Z" finished-at="2019-02-25T09:51:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CheckEditProfile status=SUCCESS method=Edit_profile_test.CheckEditProfile()[pri:0, instance:automation.test.Edit_profile_test@685cb137] output={null}]]]>
+                <![CDATA[[TestResult name=checkAddShortcut status=SUCCESS method=SiteCompose_test.checkAddShortcut()[pri:1, instance:automation.test.SiteCompose_test@685cb137] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-      </class> <!-- automation.test.Edit_profile_test -->
+      </class> <!-- automation.test.SiteCompose_test -->
     </test> <!-- opensite  -->
   </suite> <!-- Suite -->
 </testng-results>

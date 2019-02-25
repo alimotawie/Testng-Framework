@@ -2,18 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" preserve-order="true">
 
-
-
 	<test name="opensite ">
 		<classes>
 			<class name="Resourses.Base" />
 			<class name="automation.test.Login_test" />
-			<class name="automation.test.Edit_profile_test" />
+			<class name="automation.test.SiteCompose_test" />
 		</classes>
-		
-		
 	</test>
-
 
 
 </suite> <!-- Suite -->

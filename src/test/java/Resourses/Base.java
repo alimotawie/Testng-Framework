@@ -1,6 +1,8 @@
 package Resourses;
 import org.testng.annotations.BeforeSuite;
 
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,12 +29,14 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 
-public class Base {
+public class Base extends AbstractTestNGCucumberTests {
 
 	public static WebDriver driver= null;
 	public static Properties dataFile= null;
 	public static WebDriverWait wait= null;
 	public static org.json.simple.JSONObject TestData = null;
+	
+	
 	
 
 	@BeforeSuite

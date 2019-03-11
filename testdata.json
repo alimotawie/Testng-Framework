@@ -1,6 +1,6 @@
 {
-	"login":{"username" : "ali" ,  "password" : "" , "expected" :"Organization Administration Site" },
-	"loginInvalid" :{ "username" : "aliiiiiiii" ,  "password" : "" , "expected" :"Invalid Username or Password"},
+	"login":{"username" : "ali" ,  "password" : "P@ssw0rd" , "expected" :"Organization Administration Site" },
+	"loginInvalid" :{ "username" : "aliiiiiiii" ,  "password" : "P@ssw0rd" , "expected" :"Invalid Username or Password"},
 	"loginSQLi":{ "username" : "test or 1=1 --" ,"password": "test' or 1=1 #" , "expected" :"Invalid Username or Password"},
 	"loginEmpty":{ "username": "" ,"password": "" , "expected" :"Missing mandatory fields"}
 }

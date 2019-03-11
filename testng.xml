@@ -4,9 +4,10 @@
 
 	<test name="opensite ">
 		<classes>
-			<class name="Resourses.Base" />
-			<class name="automation.test.Login_test" />
-			<class name="automation.test.SiteCompose_test" />
+		<class name="runner.BDDrunner" />
+			<class name="features.UserRegister" />
+			
+			
 		</classes>
 	</test>
 
